@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Day Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Include the CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cloud Background -->
+    <div class="clouds">
+        <div class="clouds__layer clouds__layer--1"></div>
+        <div class="clouds__layer clouds__layer--2"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div id="header-container">
+            <div class="header-left">
+                <span id="live-time">--:--:--</span>
+            </div>
+            <div class="header-center">
+                <h1>Emoji Day Planner</h1>
+            </div>
+            <div class="header-right">
+                <!-- Folder Delete Icon -->
+                <div class="delete-label">Delete / Erase</div>
+                <button id="reset-button" class="icon-button">📁</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Emoji Deck -->
+    <div id="emoji-deck" class="emoji-deck">
+        <div class="deck-body">
+            <div id="emoji-grid" class="emoji-grid">
+                <!-- Emojis will be dynamically generated here -->
+            </div>
+            <!-- Directional Arrows -->
+            <div class="navigation-buttons">
+                <button id="prev-category" class="nav-button">◀️</button>
+                <span id="category-name">Smileys</span>
+                <button id="next-category" class="nav-button">▶️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Day Planner Sections -->
+        <div class="sectors-container">
+            <!-- Morning Sector -->
+            <div class="sector" id="morning-sector">
+                <div class="sector-header">
+                    <h2>Morning</h2>
+                    <button class="check-button" data-sector="morning">✔️</button>
+                </div>
+                <div class="emoji-placeholders">
+                    <!-- 5 placeholders -->
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                </div>
+            </div>
+
+            <!-- Midday Sector -->
+            <div class="sector" id="midday-sector">
+                <div class="sector-header">
+                    <h2>Midday</h2>
+                    <button class="check-button" data-sector="midday">✔️</button>
+                </div>
+                <div class="emoji-placeholders">
+                    <!-- 5 placeholders -->
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                </div>
+            </div>
+
+            <!-- Evening Sector -->
+            <div class="sector" id="evening-sector">
+                <div class="sector-header">
+                    <h2>Evening</h2>
+                    <button class="check-button" data-sector="evening">✔️</button>
+                </div>
+                <div class="emoji-placeholders">
+                    <!-- 5 placeholders -->
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                    <div class="emoji-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Custom Text Input Fields -->
+        <div class="custom-text-inputs">
+            <input type="text" placeholder="Add notes...">
+            <input type="text" placeholder="Add notes...">
+            <input type="text" placeholder="Add notes...">
+            <input type="text" placeholder="Add notes...">
+            <input type="text" placeholder="Add notes...">
+        </div>
+        <!-- Day Rating -->
+        <div class="day-rating">
+            <span>Rate your day</span>
+            <div class="rating-buttons">
+                <button class="rating-button" data-rating="1"></button>
+                <button class="rating-button" data-rating="2"></button>
+                <button class="rating-button" data-rating="3"></button>
+                <button class="rating-button" data-rating="4"></button>
+                <button class="rating-button" data-rating="5"></button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include the JS -->
+    <script src="script.js"></script>
+</body>
+</html>
